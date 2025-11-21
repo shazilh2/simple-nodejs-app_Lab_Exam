@@ -5,7 +5,7 @@ metadata:
   labels:
     app: simple-nodejs-app
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: simple-nodejs-app
@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
       - name: simple-nodejs-app
-        image: apoorvad4/simple-nodejs-app:latest
+        image: apoorvad4/nodeapp:latest
         ports:
         - containerPort: 3000
-        imagePullPolicy: Always
-        resources:
-          limits:
-            memory: "256Mi"
-            cpu: "500m"
-          requests:
-            memory: "128Mi"
-            cpu: "250m"
+        # imagePullPolicy: Always
+        # resources:
+        #   limits:
+        #     memory: "256Mi"
+        #     cpu: "500m"
+        #   requests:
+        #     memory: "128Mi"
+        #     cpu: "250m"
