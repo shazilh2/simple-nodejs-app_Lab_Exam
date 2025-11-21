@@ -1,24 +1,49 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-nodejs-app
+  name: nodejs
   labels:
-    app: simple-nodejs-app
+    app: nodejs
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: simple-nodejs-app
+      app: nodejs
   template:
     metadata:
       labels:
-        app: simple-nodejs-app
+        app: nodejs
     spec:
       containers:
-      - name: simple-nodejs-app
+      - name: nodejs
         image: apoorvad4/nodeapp:latest
         ports:
         - containerPort: 3000
+
+
+
+
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: simple-nodejs-app
+#   labels:
+#     app: simple-nodejs-app
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: simple-nodejs-app
+#   template:
+#     metadata:
+#       labels:
+#         app: simple-nodejs-app
+#     spec:
+#       containers:
+#       - name: simple-nodejs-app
+#         image: apoorvad4/nodeapp:latest
+#         ports:
+#         - containerPort: 3000
         # imagePullPolicy: Always
         # resources:
         #   limits:
