@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: apoorvad4/nodeapp:v2
+        image: sthuthi22/nodeapp:v1
         ports:
         - containerPort: 3000
 
